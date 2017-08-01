@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/widget_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/widget_layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_header_height"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/widget_padding"
+            android:paddingRight="@dimen/widget_padding">
+
+            <ImageView
+                android:id="@+id/widget_img_launcher"
+                android:layout_width="@dimen/widget_logo_dimen"
+                android:layout_height="@dimen/widget_logo_dimen"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/Null"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/title_widget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="@dimen/widget_header_padding"
+                android:paddingLeft="@dimen/widget_header_padding"
+                android:paddingRight="@dimen/widget_header_padding"
+                android:paddingStart="@dimen/widget_header_padding"
+                android:text="@string/shopping_list"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ListView
+                android:id="@+id/widget_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+
+            <RelativeLayout
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/noWidgetTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/empty_shopping_list"
+                    android:textAlignment="center"
+                    android:textColor="#000111"
+                    android:textSize="@dimen/empty_widget_text" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/noWidgetTextView"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/margin_widget"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/add_btn_string"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

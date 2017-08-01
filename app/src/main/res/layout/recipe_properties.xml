@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_inner"
+    app:cardElevation="@dimen/card_elevation">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_normal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/calorie_container"
+            android:layout_width="@dimen/no_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/calorieIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/normal_margin"
+                android:src="@drawable/fire"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calorieIcon"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:text="@string/empty_property"
+                android:textColor="@android:color/secondary_text_light"
+
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/time_container"
+            android:layout_width="@dimen/no_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/timeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/normal_margin"
+                android:src="@drawable/ic_timelapse_black_24dp"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/prep_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeIcon"
+                android:layout_centerHorizontal="true"
+                android:text="@string/empty_property"
+                android:textColor="@android:color/secondary_text_light" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/server_container"
+            android:layout_width="@dimen/no_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/servesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/normal_margin"
+                android:src="@drawable/ic_room_service_black_24dp"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/serves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/servesIcon"
+                android:layout_centerHorizontal="true"
+                android:text="@string/empty_property"
+                android:textColor="@android:color/secondary_text_light" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+

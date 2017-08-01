@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_stepLinearLayout">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dvider_height">
+
+        <TextView
+            android:id="@+id/stepTextOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:text="@string/tarunveer_singh_saini"/>
+
+        <Button
+            android:id="@+id/remove_step"
+            android:layout_width="@dimen/remove_button_dimen"
+            android:layout_height="@dimen/remove_button_dimen"
+            android:layout_gravity="end|center_vertical"
+            android:layout_margin="@dimen/normal_margin"
+            android:layout_weight="0.5"
+            android:background="@drawable/ic_remove_circle_red_600_18dp"
+            />
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
+
+

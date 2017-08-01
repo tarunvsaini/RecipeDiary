@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_background_image_height"
+    android:id="@+id/header">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/header_background_image"
+        android:layout_height="@dimen/nav_background_image_height"
+        android:src="@drawable/gradient_background"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/orange"
+        android:layout_centerInParent="true"
+        android:id="@+id/header_icon"
+        android:contentDescription="@string/user_profile_image" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_icon"
+        android:layout_centerHorizontal="true"
+        android:text="@string/recipe_diary"
+        android:textColor="@android:color/white"
+        android:layout_margin="@dimen/margin_small"
+        android:textSize="@dimen/nav_email_text"
+        android:id="@+id/header_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_user_detail_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/nav_padding"
+        android:paddingLeft="@dimen/nav_padding"
+        android:paddingStart="@dimen/nav_padding"
+        android:paddingRight="@dimen/nav_padding">
+
+        <TextView
+            android:id="@+id/txvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="bottom"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/nav_email_text" />
+
+        <TextView
+            android:id="@+id/txvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="bottom"
+            android:text="@string/sample_mail"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/nav_email_text"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "748148275196",
+    "firebase_url": "https://recipeform-b8210.firebaseio.com",
+    "project_id": "recipeform-b8210",
+    "storage_bucket": "recipeform-b8210.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748148275196:android:c0620ca129f86777",
+        "android_client_info": {
+          "package_name": "com.tarun.saini.recipeform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748148275196-egfdefddt9p29auckaik5jnr4pusac5n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tarun.saini.recipeform",
+            "certificate_hash": "eb84388ad45d6a882841e9dc5349646bc8900dfe"
+          }
+        },
+        {
+          "client_id": "748148275196-sge93ljdsrtj5s05872a9gn44fc9bgb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASAVN2CJ9sS4IRUDwSSE6quheeQQt6VsI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748148275196-sge93ljdsrtj5s05872a9gn44fc9bgb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

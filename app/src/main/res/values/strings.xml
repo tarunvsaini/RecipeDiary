@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">Recipe Diary</string>
+
+    <string-array name="recipe_type">
+
+
+        <item>Main Dish</item>
+        <item>Soup</item>
+        <item>Salads</item>
+        <item>Bread</item>
+        <item>Beverage</item>
+        <item>Dessert</item>
+        <item>Appetizer</item>
+        <item>Sauce</item>
+        <item>Side Dish</item>
+
+
+    </string-array>
+
+    <string-array name="recipe_category">
+        <item>Vegetable</item>
+        <item>Chicken</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Brunch</item>
+        <item>Snack</item>
+        <item>Healthy Food</item>
+        <item>Baking</item>
+        <item>BBQ</item>
+        <item>Kid Friendly</item>
+        <item>Veg</item>
+        <item>Non-Veg</item>
+
+    </string-array>
+
+
+    <string-array name="ingredient_unit">
+        <item>Unit</item>
+        <item>mg</item>
+        <item>g</item>
+        <item>Kg</item>
+        <item>tsp</item>
+        <item>tbsp</item>
+        <item>ml</item>
+        <item>litre</item>
+        <item>cup</item>
+        <item>ounce</item>
+
+
+    </string-array>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="auth_failed">Unable to signIn</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+    <string-array name="slide">
+        <item>UPLOAD YOUR RECIPE</item>
+        <item>VEG RECIPES</item>
+        <item>NON-VEG RECIPES</item>
+    </string-array>
+    <string name="directions">DIRECTIONS</string>
+
+
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="click_to_add_recipe_image">Click To Add Recipe Image</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="recipe_property">Recipe Property</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="register_text_button">Register</string>
+    <string name="sucess">Successful</string>
+    <string name="failed">Failed</string>
+    <string name="upload">UPLOAD</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="button_add_image">add recipe image</string>
+    <string name="upload_this_image">upload this recipe image</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="Null">Null</string>
+    <string name="empty_shopping_list">Shopping List is Empty</string>
+    <string name="add_btn_string">Add</string>
+    <string name="no_favorite_movies">Currently you have no favorite movies</string>
+    <string name="login">login</string>
+    <string name="register_here">No Account? Register Here!</string>
+    <string name="register">register</string>
+    <string name="already_registered">Already Registered ? Login Here!</string>
+    <string name="ingredient_measure_text">0</string>
+    <string name="unit">Unit</string>
+    <string name="recpe_name">Recpe Name</string>
+    <string name="secondary_text">Secondary Text</string>
+    <string name="ingredients">INGREDIENTS</string>
+    <string name="recipe_image">Recipe image</string>
+    <string name="something_went_wrong">Something Went wrong! Check your Internet connectivity</string>
+    <string name="recipe_diary">Recipe Diary</string>
+    <string name="sample_mail">example@email.com</string>
+    <string name="user_profile_image">User profile image</string>
+    <string name="dummy_ingredient">1 kg sugar</string>
+    <string name="empty_property">--</string>
+    <string name="tarunveer_singh_saini">Tarunveer Singh saini</string>
+    <string name="add_sugar">add sugar</string>
+    <string name="quantity_dummy">200 g</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login_btn">login button</string>
+    <string name="recipe_name_et">Recipe Name</string>
+    <string name="recipe_category">Recipe Category</string>
+    <string name="recipe_type">Recipe Type</string>
+    <string name="calories">Calories</string>
+    <string name="time">Time</string>
+    <string name="serves">Serves</string>
+    <string name="description">Description</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="quantity">Quantity</string>
+    <string name="add_ingredient_to_list">add ingredient to list</string>
+    <string name="steps">STEPS</string>
+    <string name="step">STEP</string>
+    <string name="add_step_to_list">add step to list</string>
+    <string name="serves_string">Serves:</string>
+    <string name="calories_string">calories</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite_recipes">Favorite Recipes</string>
+    <string name="no_favorite_recipes_added">No favorite Recipes Added</string>
+    <string name="you_can_add_favorites_from_recipe">You can add favorites from Recipe.</string>
+    <string name="shopping_list_available_widget">Shopping list are also in Home screen widget</string>
+    <string name="empty_shoppinglist">No item in Shopping List</string>
+    <string name="litre">1 litre</string>
+    <string name="milk">Milk</string>
+    <string name="recipe_calories">Recipe Calories</string>
+    <string name="estimated_time">Estimated Time</string>
+    <string name="servings">Servings</string>
+    <string name="recipe_description">Recipe Description</string>
+    <string name="ingredient_quantity">Ingredient quantity</string>
+    <string name="step_add">step</string>
+</resources>

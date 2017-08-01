@@ -1,0 +1,172 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.DetailActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:fitsSystemWindows="true"
+            android:focusable="true"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            android:maxLines="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                android:id="@+id/recipe_backdrop_linear_layout"
+                app:layout_collapseMode="parallax">
+                <ImageView
+                    android:id="@+id/backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/backdrip_height"
+                    android:background="@drawable/pholder"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/recipe_image" />
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginBottom="50dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:id="@+id/nestedScrollView_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_for_add_view">
+            <RelativeLayout
+                android:id="@+id/recipe_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/recipeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_margin_inner"
+                    android:text="@string/recpe_name"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.StatusBar.EventContent.Title"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="@dimen/recipe_text_size" />
+
+                <TextView
+                    android:id="@+id/recipeCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/recipeName"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/layout_margin_inner"
+                    android:layout_marginStart="@dimen/layout_margin_inner"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:text="@string/secondary_text"
+                    android:textColor="@android:color/tertiary_text_dark" />
+
+                <CheckBox
+                    android:button="@drawable/favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addFavorite"
+                    android:layout_gravity="center_vertical"
+                    android:checked="false"
+                    android:focusable="true"
+                    android:layout_margin="@dimen/normal_margin"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/recipeName"
+                    android:layout_alignEnd="@+id/recipeName" />
+
+
+            </RelativeLayout>
+            <include
+                android:id="@+id/recipe_properties_layout"
+                layout="@layout/recipe_properties">
+            </include>
+
+
+            <TextView
+                android:id="@+id/ingredient_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_inner"
+                android:text="@string/ingredients"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ingredient_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/step_recycler_view_margin_top">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dvider_height"
+                android:layout_marginTop="@dimen/view_line_margin"
+                android:id="@+id/divider_recipe"
+                android:background="@android:color/darker_gray">
+
+            </View>
+
+
+            <TextView
+                android:id="@+id/steps_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_inner"
+                android:text="@string/directions"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/steps_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/step_recycler_view_margin_top">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

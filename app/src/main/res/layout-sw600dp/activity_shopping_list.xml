@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/shopping_list_linear_layout"
+    tools:context="com.tarun.saini.recipeDiary.UI.ShoppingListActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/dimen_login_potrait"
+        android:layout_marginRight="@dimen/dimen_login_potrait"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shopping_list_card"
+        android:layout_margin="@dimen/layout_margin_inner">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/shopping_list_recycler_view">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <RelativeLayout
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/empty_favorites_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/no_shopping_list"/>
+
+            <TextView
+                android:id="@+id/empty_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empty_favorites_image"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/empty_shoppinglist"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceMedium"/>
+
+            <TextView
+                android:id="@+id/empty_subtitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empty_title_text"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                android:paddingTop="@dimen/padding_normal"
+                android:text="@string/shopping_list_available_widget"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@color/text_color_s"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>
+</RelativeLayout>

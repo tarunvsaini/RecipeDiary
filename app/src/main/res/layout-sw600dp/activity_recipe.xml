@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+<!-- Page Content -->
+<LinearLayout
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:id="@+id/two_pane_container"
+        tools:context="com.tarun.saini.recipeDiary.UI.RecipeActivity">
+
+        <FrameLayout
+            android:layout_width="@dimen/fragment_list_width"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/normal_margin"
+            android:id="@+id/recipe_list_container">
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="@dimen/divider_dimen"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+
+        <LinearLayout
+            android:id="@+id/recipe_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_normal">
+
+
+            <FrameLayout
+                android:id="@+id/recipe_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<!-- Navigation View -->
+<android.support.design.widget.NavigationView
+    android:id="@+id/navigationView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@android:color/white"
+    app:headerLayout="@layout/header"
+    app:itemIconTint="@color/itemColorTint"
+    app:itemTextColor="@color/itemColorTint"
+    app:menu="@menu/menu_items_only"/>
+
+</android.support.v4.widget.DrawerLayout>
