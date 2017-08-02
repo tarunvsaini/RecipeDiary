@@ -34,6 +34,7 @@
         android:layout_gravity="end|center_vertical"
         android:layout_margin="@dimen/normal_margin"
         android:id="@+id/remove_item"
+        android:contentDescription="@string/remove_this_item_from_shopping_list"
         android:focusable="true"
         android:src="@drawable/ic_remove_circle_red_600_18dp"
         android:background="@android:color/transparent"/>

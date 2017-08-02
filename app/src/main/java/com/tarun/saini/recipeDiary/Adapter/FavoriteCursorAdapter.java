@@ -1,7 +1,6 @@
 package com.tarun.saini.recipeDiary.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +8,9 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.tarun.saini.recipeDiary.R;
-import com.tarun.saini.recipeDiary.UI.FavoriteDetailActivity;
 import com.tarun.saini.recipeDiary.data.RecipeContract.FavoriteRecipeEntry;
 
 /**

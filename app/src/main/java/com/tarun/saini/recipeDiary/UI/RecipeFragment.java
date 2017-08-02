@@ -126,7 +126,6 @@ public class RecipeFragment extends Fragment implements ConnectivityCheck.Connec
 
             @Override
             public void onFailure(Call<ArrayList<Recipe>> call, Throwable t) {
-                //Toast.makeText(getContext(), t + "", Toast.LENGTH_LONG).show();
                 Log.d("JSON fAILURE", t + "");
 
             }
@@ -138,12 +137,12 @@ public class RecipeFragment extends Fragment implements ConnectivityCheck.Connec
         boolean isConnected = ConnectivityCheck.isConnected();
         String message;
         if (isConnected) {
-            message = "Connected to Internet";
+            message = getString(R.string.connected_to_internet);
             getRecipes();
             noNetwork.setVisibility(View.GONE);
 
         } else {
-            message = "You are Offline";
+            message = getString(R.string.offline_message);
             noNetwork.setVisibility(View.VISIBLE);
 
         }
@@ -162,12 +161,12 @@ public class RecipeFragment extends Fragment implements ConnectivityCheck.Connec
 
         String message;
         if (isConnected) {
-            message = "Connected to Internet";
+            message = getString(R.string.connected_to_internet);
             getRecipes();
             noNetwork.setVisibility(View.GONE);
 
         } else {
-            message = "You are Offline";
+            message = getString(R.string.offline_message);
             noNetwork.setVisibility(View.VISIBLE);
 
         }

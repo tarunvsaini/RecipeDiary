@@ -1,11 +1,9 @@
 package com.tarun.saini.recipeDiary.Adapter;
 
-import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
@@ -15,13 +13,10 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tarun.saini.recipeDiary.Model.Ingredient;
 import com.tarun.saini.recipeDiary.R;
-import com.tarun.saini.recipeDiary.UI.DetailActivity;
 import com.tarun.saini.recipeDiary.UI.RecipeActivity;
-import com.tarun.saini.recipeDiary.data.RecipeContract;
 import com.tarun.saini.recipeDiary.widget.ShoppingListWidget;
 
 import java.util.ArrayList;
@@ -30,7 +25,6 @@ import static com.tarun.saini.recipeDiary.data.RecipeContract.LIST_CONTENT_URI;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.ShoppingListEntry.KEY_ID;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.ShoppingListEntry.KEY_INGREDIENT;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.ShoppingListEntry.KEY_MEASURE;
-import static com.tarun.saini.recipeDiary.data.RecipeContract.ShoppingListEntry.KEY_NAME;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.ShoppingListEntry.KEY_QUANTITY;
 
 /**
@@ -62,13 +56,13 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
 
                 if(vh.mCheckBox.isChecked())
                 {
-                    Snackbar.make(view,"Added to Shopping List ",Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(view, R.string.added_to_shopping_list,Snackbar.LENGTH_SHORT).show();
                     addToShoppingList();
 
                 }
                 else
                 {
-                    Snackbar.make(view,"Removed from Shopping List",Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(view, R.string.removed_from_shopping_list,Snackbar.LENGTH_SHORT).show();
                     deleteItem(mIngredients.get(position).getId());
 
                 }

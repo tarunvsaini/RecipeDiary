@@ -7,19 +7,19 @@
         <item
             android:id="@+id/home"
             android:icon="@drawable/ic_home_grey_700_18dp"
-            android:title="Home">
+            android:title="@string/home">
 
         </item>
         <item
             android:id="@+id/upload_recipe"
             android:icon="@drawable/ic_file_upload_grey_700_18dp"
-            android:title="Upload Your Recipe">
+            android:title="@string/upload_your_recipe">
 
         </item>
         <item
             android:id="@+id/shopping_list"
             android:icon="@drawable/ic_add_shopping_cart_grey_700_18dp"
-            android:title="Shopping List">
+            android:title="@string/shopping_list_menu">
 
         </item>
 
@@ -27,7 +27,7 @@
         <item
             android:id="@+id/favourite_recipes"
             android:icon="@drawable/ic_favorite_red_600_18dp"
-            android:title="Favourite Recipes">
+            android:title="@string/favourite_recipes">
 
         </item>
 
@@ -35,7 +35,7 @@
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_account_circle_grey_700_18dp"
-            android:title="Logout">
+            android:title="@string/logout">
 
         </item>
 

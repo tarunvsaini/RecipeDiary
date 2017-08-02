@@ -55,10 +55,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    Toast.makeText(LoginActivity.this, "SignedIn with:" + user.getEmail(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, getString(R.string.signed_in) + user.getEmail(), Toast.LENGTH_SHORT).show();
                 } else {
                     Log.d(TAG, "onAuthStateChanged:signed_out");
-                    //Toast.makeText(LoginActivity.this, "Signed Out", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, R.string.signed_out, Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -93,10 +93,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             String password = passwordEditText.getText().toString();
 
             if (TextUtils.isEmpty(email)) {
-                Toast.makeText(LoginActivity.this, "Please Enter Your Email ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, R.string.please_enter_your_email, Toast.LENGTH_SHORT).show();
 
             } else if (TextUtils.isEmpty(password)) {
-                Toast.makeText(LoginActivity.this, "Please Enter your password", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, R.string.please_enter_your_password, Toast.LENGTH_SHORT).show();
             } else {
 
 

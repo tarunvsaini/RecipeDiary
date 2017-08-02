@@ -75,6 +75,7 @@
                     android:id="@+id/recipeName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
                     android:layout_margin="@dimen/layout_margin_inner"
                     android:text="@string/recpe_name"
                     android:textAllCaps="true"
@@ -90,6 +91,7 @@
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="@dimen/layout_margin_inner"
                     android:layout_marginStart="@dimen/layout_margin_inner"
+                    android:focusableInTouchMode="true"
                     android:paddingBottom="@dimen/padding_small"
                     android:text="@string/secondary_text"
                     android:textColor="@android:color/tertiary_text_dark" />
@@ -97,6 +99,7 @@
             </RelativeLayout>
             <include
                 android:id="@+id/recipe_properties_layout"
+                android:focusableInTouchMode="true"
                 layout="@layout/recipe_properties">
             </include>
 

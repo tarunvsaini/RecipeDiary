@@ -14,18 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.tarun.saini.recipeDiary.Adapter.FavoriteCursorAdapter;
 import com.tarun.saini.recipeDiary.Adapter.FavoriteIngredientAdapter;
-import com.tarun.saini.recipeDiary.Adapter.IngredientAdapter;
 import com.tarun.saini.recipeDiary.Adapter.StepAdapter;
 import com.tarun.saini.recipeDiary.Model.Ingredient;
-import com.tarun.saini.recipeDiary.Model.Recipe;
 import com.tarun.saini.recipeDiary.R;
 import com.tarun.saini.recipeDiary.data.RecipeContract;
 import com.tarun.saini.recipeDiary.data.RecipeContract.FavoriteRecipeEntry;
@@ -33,7 +28,6 @@ import com.tarun.saini.recipeDiary.data.RecipeContract.FavoriteRecipeSteps;
 import com.tarun.saini.recipeDiary.data.RecipeContract.IngredientEntry;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static com.tarun.saini.recipeDiary.UI.FavoriteRecipe.FAVORITE_RECIPE_ID;
 import static com.tarun.saini.recipeDiary.UI.FavoriteRecipe.PANES_F;

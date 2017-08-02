@@ -46,15 +46,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     public RecipeAdapter.RecipeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         mView= LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_card,parent,false);
         final RecipeViewHolder recipeViewHolder=new RecipeViewHolder(mView);
-
-     /*   mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-
-            }
-        });*/
         return recipeViewHolder ;
 
     }
@@ -66,22 +57,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         holder.recipeListText.setText(current.getName());
         holder.secondaryText.setText(current.getRecipetype());
         Glide.with(mContext).load(current.getImage()).into(holder.recipeListImage);
-           /* Glide.with(mContext).load(current.getImage()).listener(GlidePalette.with(current.getImage())
-                    .use(GlidePalette.Profile.VIBRANT)
-                    .intoBackground(holder.cardView)).into(holder.slideImage);*/
-
-
         RecipeActivity.setLatoBlack(mContext,holder.recipeListText);
         RecipeActivity.setLatoRegular(mContext,holder.secondaryText);
         RecipeActivity.setLatoBold(mContext,holder.recipeListText);
-
-        /*if ((position + 1) % 5 == 0)
-        {
-            ViewGroup.MarginLayoutParams marginParams = (ViewGroup.MarginLayoutParams) holder.cardView.getLayoutParams();
-            marginParams.setMargins(8, 8, 8, 8);
-            holder.cardView.setLayoutParams(marginParams);
-        }*/
-
 
 
 
@@ -117,6 +95,5 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
             });
         }
     }
-    //private final OnRecipeClickListener mClickListener;
 
 }

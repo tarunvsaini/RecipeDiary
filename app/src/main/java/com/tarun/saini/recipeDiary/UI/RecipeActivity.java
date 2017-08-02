@@ -73,9 +73,6 @@ public class RecipeActivity extends AppCompatActivity implements RecipeAdapter.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
-
-        /*recipeUploadText= (TextView) findViewById(R.id.upload_text);
-        setLatoBold(this,recipeUploadText);*/
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle(R.string.app_name);
         setSupportActionBar(mToolbar);
@@ -162,7 +159,6 @@ public class RecipeActivity extends AppCompatActivity implements RecipeAdapter.O
 
             DetailFragment detailFragment = new DetailFragment();
             bundle.putInt(POSITION, recipe.size()-position-1);
-            //bundle.putParcelableArrayList(LIST,recipe);
             bundle.putBoolean(PANES, mTwoPane);
             bundle.putString(ID,recipe.get(recipe.size()-position-1).getId());
             bundle.putString(RECIPE_TYPE,recipe.get(recipe.size()-position-1).getRecipetype());
@@ -218,8 +214,6 @@ public class RecipeActivity extends AppCompatActivity implements RecipeAdapter.O
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         String itemName = (String) menuItem.getTitle();
-
-       // Toast.makeText(this, itemName + " Clicked", Toast.LENGTH_SHORT).show();
 
         closeDrawer();
 

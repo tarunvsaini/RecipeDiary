@@ -133,7 +133,6 @@
     <string name="serves_string">Serves:</string>
     <string name="calories_string">calories</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="favorite_recipes">Favorite Recipes</string>
     <string name="no_favorite_recipes_added">No favorite Recipes Added</string>
@@ -148,4 +147,40 @@
     <string name="recipe_description">Recipe Description</string>
     <string name="ingredient_quantity">Ingredient quantity</string>
     <string name="step_add">step</string>
+    <string name="file_upload_message">File Uploaded</string>
+    <string name="added_to_shopping_list">Added to Shopping List</string>
+    <string name="removed_from_shopping_list">Removed from Shopping List</string>
+    <string name="added_to_favorite_recipes">Added to Favourite Recipes</string>
+    <string name="removed_from_favorite_recipes">Removed From Favourite Recipes</string>
+    <string name="please_enter_your_email">Please Enter Your Email</string>
+    <string name="please_enter_your_password">Please Enter your password</string>
+    <string name="signed_in">SignedIn with:</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="connected_to_internet">Connected to Internet</string>
+    <string name="offline_message">You are Offline</string>
+    <string name="password_too_short">Password too small minimum 6 or more characters</string>
+    <string name="shopping_list_title">Shopping List</string>
+    <string name="uploading_message">Uploading</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="select_recipe_image">Please Select a Recipe Image</string>
+    <string name="add_image">Add Image</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="step_hint">Step</string>
+    <string name="add_quantity">Please Add Quantity</string>
+    <string name="ingredient_hint">Ingredient</string>
+    <string name="quantity_hint">Quantity</string>
+    <string name="please_fill_calories_column">Please Fill Calories Column</string>
+    <string name="please_fill_serves_column">Please Fill ServesColumn</string>
+    <string name="please_add_ingredients">Please add Ingredients</string>
+    <string name="please_add_steps">Please add Steps</string>
+    <string name="upload_recipe">Upload Recipe</string>
+    <string name="home">Home</string>
+    <string name="upload_your_recipe">Upload Your Recipe</string>
+    <string name="shopping_list_menu">Shopping List</string>
+    <string name="favourite_recipes">Favourite Recipes</string>
+    <string name="logout">Logout</string>
+    <string name="remove_this_item_from_shopping_list">remove this item from shopping list</string>
+    <string name="ingredient_name">ingredient name</string>
 </resources>

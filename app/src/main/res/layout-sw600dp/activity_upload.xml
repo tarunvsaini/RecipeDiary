@@ -356,7 +356,7 @@
                             android:maxLines="1"
                             android:focusable="true"
                             android:minHeight="@dimen/et_height"
-                            android:contentDescription="ingredient name"
+                            android:contentDescription="@string/ingredient_name"
                             android:nextFocusForward="@id/quantity"
                             android:padding="@dimen/padding_mini" />
 

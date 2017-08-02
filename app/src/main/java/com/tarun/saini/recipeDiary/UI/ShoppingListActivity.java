@@ -59,7 +59,7 @@ public class ShoppingListActivity extends AppCompatActivity {
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Shopping List");
+        toolbar.setTitle(R.string.shopping_list_title);
         setSupportActionBar(toolbar);
         toolbar.setFitsSystemWindows(true);
         getSupportActionBar().setHomeButtonEnabled(true);

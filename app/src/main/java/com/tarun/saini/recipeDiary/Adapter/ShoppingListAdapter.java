@@ -61,7 +61,6 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
         mShoppingList.remove(position);
         notifyItemRemoved(position);
         notifyItemRangeChanged(position,mShoppingList.size());
-       // notifyDataSetChanged();
 
     }
 

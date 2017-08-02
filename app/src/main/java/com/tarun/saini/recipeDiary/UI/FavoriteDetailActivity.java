@@ -1,21 +1,15 @@
 package com.tarun.saini.recipeDiary.UI;
 
+import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.tarun.saini.recipeDiary.Model.Recipe;
 import com.tarun.saini.recipeDiary.R;
 
-import static com.tarun.saini.recipeDiary.Adapter.FavoriteCursorAdapter.RECIPE_ID;
-import static com.tarun.saini.recipeDiary.Adapter.RecipeAdapter.RECIPE;
 import static com.tarun.saini.recipeDiary.UI.FavoriteRecipe.PANES_F;
-import static com.tarun.saini.recipeDiary.UI.RecipeActivity.PANES;
 
 public class FavoriteDetailActivity extends AppCompatActivity {
 

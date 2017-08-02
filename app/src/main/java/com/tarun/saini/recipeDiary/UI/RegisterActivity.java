@@ -45,11 +45,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         registerButton.setIndeterminateProgressMode(true);
 
 
-       /* if (mAuth.getCurrentUser() !=null)
-        {
 
-        }
-*/
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -62,11 +59,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    //Toast.makeText(RegisterActivity.this, "SignedIn with:"+user.getEmail(), Toast.LENGTH_SHORT).show();
+
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
-                   // Toast.makeText(RegisterActivity.this, "Signed Out", Toast.LENGTH_SHORT).show();
+
                 }
                 // ...
             }
@@ -104,16 +101,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             if (TextUtils.isEmpty(email))
             {
-                Toast.makeText(RegisterActivity.this, "Please Enter Your Email ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, R.string.please_enter_your_email, Toast.LENGTH_SHORT).show();
             }
             else if(TextUtils.isEmpty(password))
             {
-                Toast.makeText(RegisterActivity.this, "Please Enter a password", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, R.string.please_enter_your_password, Toast.LENGTH_SHORT).show();
 
             }
             else if(password.length()<6)
             {
-                Toast.makeText(this, "Password too small minimum 6 or more characters", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.password_too_short, Toast.LENGTH_LONG).show();
             }
 
             else

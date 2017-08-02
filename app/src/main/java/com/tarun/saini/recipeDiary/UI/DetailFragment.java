@@ -1,10 +1,8 @@
 package com.tarun.saini.recipeDiary.UI;
 
 
-import android.content.ContentUris;
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -22,7 +20,6 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.tarun.saini.recipeDiary.Adapter.IngredientAdapter;
@@ -51,9 +48,7 @@ import static com.tarun.saini.recipeDiary.UI.RecipeActivity.TIME;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.FAVORITE_CONTENT_URI;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.FavoriteRecipeEntry.RECIPE_ID;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.INGREDIENT_CONTENT_URI;
-import static com.tarun.saini.recipeDiary.data.RecipeContract.LIST_CONTENT_URI;
 import static com.tarun.saini.recipeDiary.data.RecipeContract.STEP_CONTENT_URI;
-import static com.tarun.saini.recipeDiary.data.RecipeContract.ShoppingListEntry.KEY_ID;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -147,7 +142,7 @@ public class DetailFragment extends Fragment {
                     addIngredient(ingredients);
                     addSteps(steps);
                     Snackbar snackbar = Snackbar
-                            .make(coordinatorLayout, "Added to Favourite Recipes", Snackbar.LENGTH_LONG);
+                            .make(coordinatorLayout, R.string.added_to_favorite_recipes, Snackbar.LENGTH_LONG);
 
 
                     snackbar.show();
@@ -155,7 +150,7 @@ public class DetailFragment extends Fragment {
                 } else {
                     deleteRecipe(id);
                     Snackbar snackbar = Snackbar
-                            .make(coordinatorLayout, "Removed From Favourite Recipes", Snackbar.LENGTH_LONG);
+                            .make(coordinatorLayout, R.string.removed_from_favorite_recipes, Snackbar.LENGTH_LONG);
 
 
                     snackbar.show();

@@ -11,6 +11,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
+import android.os.PersistableBundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
@@ -158,7 +159,7 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
                 if (scrollRange + verticalOffset == 0) {
 
                     isShow = true;
-                    collapsingToolbar.setTitle("Upload Recipe");
+                    collapsingToolbar.setTitle(getString(R.string.upload_recipe));
                     collapsed = false;
 
                 } else if (isShow) {
@@ -227,7 +228,7 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
         if (selectedImageUri != null) {
             //displaying a progress dialog while upload is going on
             final ProgressDialog progressDialog = new ProgressDialog(this);
-            progressDialog.setTitle("Uploading");
+            progressDialog.setTitle(getString(R.string.uploading_message));
             progressDialog.show();
             String path = "images/" + currentDateTimeString + ".jpg";
             StorageReference riversRef = mStorageRef.child(path);
@@ -239,13 +240,12 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
                             //hiding the progress dialog
                             progressDialog.dismiss();
 
-                            //and displaying a success toast
-                            Toast.makeText(getApplicationContext(), "File Uploaded ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), R.string.file_upload_message, Toast.LENGTH_LONG).show();
                             @SuppressWarnings("VisibleForTests") Uri ImageUrl = taskSnapshot.getDownloadUrl();
                             assert ImageUrl != null;
                             downLoadUrl = ImageUrl.toString().trim();
                             if (!TextUtils.isEmpty(downLoadUrl)) {
-                                //Toast.makeText(UploadActivity.this, downLoadUrl+"", Toast.LENGTH_SHORT).show();
+
                                 upload.setEnabled(false);
 
                             }
@@ -273,11 +273,11 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
                             @SuppressWarnings("VisibleForTests") double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
 
                             //displaying percentage in progress dialog
-                            progressDialog.setMessage("Uploaded " + ((int) progress) + "%...");
+                            progressDialog.setMessage(getString(R.string.uploaded) + ((int) progress) + "%...");
                         }
                     });
         } else {
-            Toast.makeText(this, "Please Select a Recipe Image", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.select_recipe_image, Toast.LENGTH_SHORT).show();
 
         }
 
@@ -303,27 +303,27 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
 
     private void SelectImage() {
 
-        final CharSequence[] items = {"Camera", "Gallery", "Cancel"};
+        final CharSequence[] items = {getString(R.string.camera), getString(R.string.gallery), getString(R.string.cancel)};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UploadActivity.this);
-        builder.setTitle("Add Image");
+        builder.setTitle(R.string.add_image);
 
         builder.setItems(items, new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (items[i].equals("Camera")) {
+                if (items[i].equals(getString(R.string.camera))) {
 
                     Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                     startActivityForResult(intent, REQUEST_CAMERA);
 
-                } else if (items[i].equals("Gallery")) {
+                } else if (items[i].equals(getString(R.string.gallery))) {
 
                     Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     intent.setType("image/*");
                     startActivityForResult(intent, SELECT_FILE);
 
-                } else if (items[i].equals("Cancel")) {
+                } else if (items[i].equals(getString(R.string.cancel))) {
                     dialogInterface.dismiss();
                 }
             }
@@ -391,7 +391,7 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
         TextView textOut = (TextView) addView.findViewById(R.id.stepTextOut);
         textOut.setText(steps.getText().toString().trim());
         steps.setText("");
-        steps.setHint("Step");
+        steps.setHint(R.string.step_hint);
         RecipeActivity.setLatoRegular(this, textOut);
         Button remove = (Button) addView.findViewById(R.id.remove_step);
         remove.setOnClickListener(new View.OnClickListener() {
@@ -417,7 +417,7 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
         if (!TextUtils.isEmpty(rquantity)) {
             quantityOut.setText(rquantity);
         } else {
-            Toast.makeText(this, "Please Add Quantity", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.add_quantity, Toast.LENGTH_SHORT).show();
         }
 
         TextView ingredientOut = (TextView) addView.findViewById(R.id.ingredientTextOut);
@@ -430,8 +430,8 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
         RecipeActivity.setLatoRegular(this, unitOut);
         ingredients.setText("");
         quantity.setText("");
-        ingredients.setHint("Ingredient");
-        quantity.setHint("Quantity");
+        ingredients.setHint(R.string.ingredient_hint);
+        quantity.setHint(R.string.quantity_hint);
 
         Button remove = (Button) addView.findViewById(R.id.remove_ingredient);
         remove.setOnClickListener(new View.OnClickListener() {
@@ -487,14 +487,14 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
 
                 }
                 if (TextUtils.isEmpty(Rcalories)) {
-                    Toast.makeText(UploadActivity.this, "Please Fill Calories Column", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UploadActivity.this, R.string.please_fill_calories_column, Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(Rserves)) {
-                    Toast.makeText(UploadActivity.this, "Please Fill ServesColumn", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UploadActivity.this, R.string.please_fill_serves_column, Toast.LENGTH_SHORT).show();
                 } else if (ingredientArrayList.size() == 0) {
-                    Toast.makeText(UploadActivity.this, "Please add Ingredients", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UploadActivity.this, R.string.please_add_ingredients, Toast.LENGTH_SHORT).show();
 
                 } else if (stepArrayList.size() == 0) {
-                    Toast.makeText(UploadActivity.this, "Please add Steps", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UploadActivity.this, R.string.please_add_steps, Toast.LENGTH_SHORT).show();
 
                 } else {
                     //recipe image is uploaded along with other information
@@ -504,6 +504,13 @@ public class UploadActivity extends AppCompatActivity implements View.OnKeyListe
 
             }
         });
+
+    }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
 
     }
 
